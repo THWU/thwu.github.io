@@ -23,9 +23,17 @@
 			font-weight: bold;
 		}
 		
-		.p_font-family, .p_font-family2 {
-			
+		.p_font-family,
+		.p_font-family2 {
 			font-family: sans-serif;
+		}
+		
+		.p_inheritance {
+			font-size: 20px;
+		}
+		
+		.p_inheritance2 {
+			color: red;
 		}
 	</style>
 </head>
@@ -45,7 +53,7 @@
 							<code class="language-html" data-lang="html">.p { font-size: 40px; }</code>
 						</pre>
 					</div>
-					
+
 					<h2 id="code-inline">Font Color</h2>
 					<div class="bs-example" data-example-id="inline-code">
 						<p class="p_color">Font Color</p>
@@ -55,7 +63,7 @@
 							<code class="language-html" data-lang="html">.p { color: #000000; }</code>
 						</pre>
 					</div>
-					
+
 					<h2 id="code-inline">Font Weight: bold</h2>
 					<div class="bs-example" data-example-id="inline-code">
 						<p class="p_font-weight">Font weight</p>
@@ -67,7 +75,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="bs-docs-section">
 				<div class="col-md-9" role="main">
 					<h1 id="code" class="page-header">CSS Selector</h1>
@@ -79,6 +87,25 @@
 					<div class="highlight">
 						<pre>
 							<code class="language-html" data-lang="html">h1, h2 { font-family: sans-serif; }</code>
+						</pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="bs-docs-section">
+				<div class="col-md-9" role="main">
+					<h1 id="code" class="page-header">CSS Inheritance</h1>
+					<h2 id="code-inline">繼承</h2>
+					<div class="bs-example" data-example-id="inline-code">
+						<p class="p_inheritance">Me and my iPod in Seattle!
+							<p class="p_inheritance2">You can see the Space Needle.</p>
+							You can't see the 628 coffee shops.
+						</p>
+					</div>
+					<div class="highlight">
+						<pre>
+							<code class="language-html" data-lang="html">.p1 { font-size: 20px; }</code>
+							<code class="language-html" data-lang="html">.p2 { color: red; }</code>
 						</pre>
 					</div>
 				</div>
