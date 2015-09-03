@@ -1,0 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Emblema+One);
+
+body:not(.row) {
+	font-family: Verdana, Geneva, Arial, sans-serif !important;
+}
+
+h1 {
+	font-family: "Emblema One" !important;
+}
