@@ -1,0 +1,32 @@
+h1 { color: green; }
+
+h2 { color: grey;}
+
+.greentea {
+	color: green;
+}
+
+#raspberry {
+	color: red;
+}
+
+.guarantee {
+	
+	background-color: aquamarine;
+	background-image: url(./images/background.gif);
+	background-repeat: no-repeat;
+	border: 1px dotted black;
+	width: 400px;
+	font-weight: bold;
+	font-style: italic;
+	color: blue;
+	padding: 10px 10px 10px 80px;
+	margin: 0px 0px 0px 100px;
+	
+}
+
+.guarantee:before {
+	
+	content: '';
+	background: url(./images/background.gif) 0 0;
+}
