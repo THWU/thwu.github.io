@@ -21,6 +21,13 @@
             var cssFile = $('select[name=CSSFile]').val();
             $('#cssFile').attr('href', cssFile);
             reloadStylesheets();
+            
+            $.ajax({
+                url: cssFile,
+                done: function(data) {
+                    $('#cssContent').text(data);
+                }
+            });
         }
         
         function reloadStylesheets() {
@@ -33,15 +40,21 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-4 col-md-offset-3">
-            <span>CSS Stylesheet</span>
-            <select name="CSSFile" id="CSSFile" onclick="ChangeCSSFile()">
-                <option value="journal-1.css">Font-Family</option>
-                <option value="journal-2.css">Font-Size</option>
-                <option value="journal-3.css">Font-Style</option>
-                <option value="journal-4.css">Font-Weight</option>
-            </select>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <span>CSS Stylesheet</span>
+                <select name="CSSFile" id="CSSFile" onclick="ChangeCSSFile()">
+                    <option value="journal-1.css">Font Family</option>
+                    <option value="journal-2.css">Font Size</option>
+                    <option value="journal-3.css">Font Style</option>
+                    <option value="journal-4.css">Font Weight</option>
+                    <option value="journal-5.css">Font Color</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <p class="cssContent"></p>
         </div>
     </div>
     <div class="container">
