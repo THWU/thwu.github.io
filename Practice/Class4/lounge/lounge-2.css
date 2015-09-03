@@ -22,4 +22,5 @@ h2 { color: grey;}
 	color: blue;
 	padding: 10px 10px 10px 80px;
 	margin: 0px 0px 0px 100px;
+	border-bottom-right-radius: 50px;
 }
