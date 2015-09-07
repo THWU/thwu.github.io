@@ -23,3 +23,24 @@ h3 {
 	width: 30%;
 	font-style: italic;
 }
+
+.menu {
+	
+	border: 1px solid cadetblue;
+	width: 300px;
+	text-align: center;
+	padding: 1.5em;
+	margin: 1em;
+	
+	float: right;
+}
+
+.menu h2 {
+	
+	font-weight: bold;
+}
+
+.menu h3 {
+	
+	color: red;
+}

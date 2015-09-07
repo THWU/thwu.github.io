@@ -1,6 +1,17 @@
+.GrayBox {
+	
+	background-color: gray;
+	color: #FFF;
+	width: 450px;
+	height: 450px;
+	margin: 30px;
+	position: relative;
+}
+
 .RedBox {
 	
 	background-color: red;
+	color: #FFF;
 	height: 300px;
 	width: 300px;
 	position: absolute;
@@ -11,6 +22,7 @@
 .BlueBox {
 	
 	background-color: blue;
+	color: #FFF;
 	height: 300px;
 	width: 300px;
 }
