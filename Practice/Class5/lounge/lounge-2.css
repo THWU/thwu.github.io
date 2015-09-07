@@ -24,6 +24,10 @@ h3 {
 	font-style: italic;
 }
 
+.main {	
+	
+}
+
 .menu {
 	
 	border: 1px solid cadetblue;
@@ -31,8 +35,7 @@ h3 {
 	text-align: center;
 	padding: 1.5em;
 	margin: 1em;
-	
-	float: right;
+	float: left;
 }
 
 .menu h2 {
