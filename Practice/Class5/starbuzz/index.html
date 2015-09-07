@@ -20,12 +20,10 @@
             
             var cssFile = $('select[name=CSSFile]').val();
             $('#cssFile').attr('href', cssFile);
-            if (cssFile == 'lounge-1.css') {               
-                $('.menu').insertBefore($('h1'));
-            }else if (cssFile == 'lounge-2.css') {
-                $('.menu').insertAfter($('.main'));
+            if (cssFile == 'starbuzz-2.css') {
+                $('#sidebar').insertBefore($('#main'));
             }else {
-                $('.menu').insertBefore($('.playing'));
+                $('#main').insertBefore($('#sidebar'));
             }
             reloadStylesheets();
             
@@ -53,7 +51,10 @@
                 <span>CSS Stylesheet</span>
                 <select name="CSSFile" id="CSSFile" onChange="ChangeCSSFile()">
                     <option selected value="starbuzz.css">Original</option>
-                    <option value="starbuzz-1.css">Menu</option>
+                    <option value="starbuzz-1.css">Layout 1</option>
+                    <option value="starbuzz-2.css">Layout 2 (sidebar right float)</option>
+                    <option value="starbuzz-3.css">Layout 3 (main left float)</option>
+                    <option value="starbuzz-4.css">Layout 4 (main left float & sidebar right float)</option>
                 </select>
             </div>
         </div>

@@ -26,6 +26,7 @@ h3 {
 
 .main {	
 	
+	float: left;
 }
 
 .menu {
@@ -36,6 +37,7 @@ h3 {
 	padding: 1.5em;
 	margin: 1em;
 	float: left;
+	top: 0;
 }
 
 .menu h2 {

@@ -27,13 +27,15 @@ body {
     font-size: 105%;
     padding: 15px;
     margin: 0px 10px 10px 10px;
+    float: left;
+    width: 80%;
 }
 
 #sidebar {
     background: #efe5d0 url(images/background.gif) bottom right;
     font-size: 105%;
     padding: 15px;
-    margin: 0px 10px 10px 10px;
+    margin: 0px 10px 10px 83%;
 }
 
 #footer {
@@ -44,7 +46,7 @@ body {
     margin: 10px;
     margin-top: 0px;
     font-size: 90%;
-    clear: left;
+    clear: both;
 }
 
 h1 {
