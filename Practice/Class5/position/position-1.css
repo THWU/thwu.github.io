@@ -1,0 +1,16 @@
+.RedBox {
+	
+	background-color: red;
+	height: 300px;
+	width: 300px;
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+
+.BlueBox {
+	
+	background-color: blue;
+	height: 300px;
+	width: 300px;
+}
