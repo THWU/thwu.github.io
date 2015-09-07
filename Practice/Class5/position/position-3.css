@@ -1,6 +1,11 @@
 .GrayBox {
 	
-	
+	background-color: gray;
+	color: #FFF;
+	width: 450px;
+	height: 450px;
+	margin: 30px;
+	position: relative;
 }
 
 .RedBox {
