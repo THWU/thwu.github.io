@@ -14,3 +14,18 @@ img {
 .col4{
     background: #FF384E;
 }
+
+#fullColumn {
+    color: black;
+    border: 2px solid green;
+}
+
+#a {
+    color: black;
+    border: 2px solid blue;
+}
+
+#b {
+    color: black;
+	border: 2px solid red;
+}
