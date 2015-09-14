@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>CSS Shadowed Box</title>
-    <link rel="stylesheet" href="css/Gradient.css">
+	<link rel="stylesheet" href="css/Gradient.css">
 </head>
+
 <body>
 	<h3>linear-gradient</h3>
 	<p id="article1" class="gradient">
-		background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */<br>
-		background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */<br>
-		background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */<br>
-		background: linear-gradient(red, blue); /* Standard syntax */<br>
+		background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+		<br> background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+		<br> background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+		<br> background: linear-gradient(red, blue); /* Standard syntax */
+		<br>
 	</p>
-	<br>
 	<h3>radial-gradient</h3>
 	<p id="article2" class="gradient2">
-		background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 to 6.0 */<br>
-		background: -o-radial-gradient(red, green, blue); /* For Opera 11.6 to 12.0 */<br>
-		background: -moz-radial-gradient(red, green, blue); /* For Firefox 3.6 to 15 */<br>
-		background: radial-gradient(red, green, blue); /* Standard syntax */<br>
+		background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 to 6.0 */
+		<br> background: -o-radial-gradient(red, green, blue); /* For Opera 11.6 to 12.0 */
+		<br> background: -moz-radial-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+		<br> background: radial-gradient(red, green, blue); /* Standard syntax */
+		<br>
+	</p>
+	<h3>repeating-radial-gradient</h3>
+	<p id="article5" class="gradient5">
+		background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+		<br> background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+		<br> background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+		<br> background: linear-gradient(red, blue); /* Standard syntax */
+		<br>
+	</p>
+	<h3>repeating-radial-gradient over layer</h3>
+	<div id="container">
+		<div id="container1" class="gradient6">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores illo distinctio veniam voluptas beatae pariatur ipsam
+			dolorum minima voluptates assumenda voluptate, enim laboriosam blanditiis dolore ducimus ullam ea culpa in.
+		</div>
+		<div id="container2">
+		</div>
+	</div>
+	<h3>radial-gradient (circle)</h3>
+	<p id="article3" class="gradient3">
+		background: -webkit-radial-gradient(circle, red, green, blue); /* Safari 5.1 to 6.0 */
+		<br> background: -o-radial-gradient(circle,red, green, blue); /* For Opera 11.6 to 12.0 */
+		<br> background: -moz-radial-gradient(circle,red, green, blue); /* For Firefox 3.6 to 15 */
+		<br> background: radial-gradient(circle,red, green, blue); /* Standard syntax */
+		<br>
+	</p>
+	<h3>radial-gradient (position)</h3>
+	<p id="article4" class="gradient4">
+		/* Safari 5.1 to 6.0 */ background: -webkit-radial-gradient(60% 55%, closest-side,blue,green,yellow,white);
+		<br> /* For Opera 11.6 to 12.0 */ background: -o-radial-gradient(60% 55%, closest-side,blue,green,yellow,white);
+		<br> /* For Firefox 3.6 to 15 */ background: -moz-radial-gradient(60% 55%, closest-side,blue,green,yellow,white);
+		<br> /* Standard syntax */ background: radial-gradient(closest-side at 60% 55%,blue,green,yellow,white);
+		<br>
 	</p>
 </body>
+
 </html>

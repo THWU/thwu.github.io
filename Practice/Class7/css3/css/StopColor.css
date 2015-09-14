@@ -17,17 +17,3 @@ body {
 	background: -moz-linear-gradient(left, #900, #FC0 10%, #FC0 90%, #900); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(left, #900, #FC0 10%, #FC0 90%, #900); /* Standard syntax */
 }
-
-#article2 {	
-	border: 1px solid black;
-	width: 800px;
-	padding: 1em;
-	marging: 1em;
-	font-size: 18px;
-	font-weight: bold;
-	border-radius: 25px; 
-}
-
-.stopColor2 {
-	
-}
