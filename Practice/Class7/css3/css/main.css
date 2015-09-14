@@ -36,3 +36,47 @@
 #pic2 {
 	-webkit-filter: saturate(7) blur(5px);
 }
+
+.transforme {
+	transform: rotate(10deg)
+}
+
+.origin {
+	transform-origin: 0 0;
+}
+
+.duration {
+	transition-property: transform;
+	transition-duration: 1s;
+}
+
+.duration:hover {
+	transform: rotate(360deg);
+}
+
+.scale {
+	transition-property: transform;
+	transition-duration: 1s;
+}
+
+.scale:hover {
+	transform: scale(-1, 1);
+}
+
+.translate {
+	transition-property: transform;
+	transition-duration: 1s;
+}
+
+.translate:hover {
+	transform: translate(100px, 0);
+}
+
+.skew {
+	transition-property: transform;
+	transition-duration: 1s;
+}
+
+.skew:hover {
+	transform: skew(30deg, 0);
+}
