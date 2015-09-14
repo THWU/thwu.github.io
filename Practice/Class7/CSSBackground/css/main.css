@@ -28,11 +28,3 @@
 .filtered {
 	-webkit-filter: saturate(3);
 }
-
-#pic1 {
-	
-}
-
-#pic2 {
-	-webkit-filter: saturate(7) blur(5px);
-}

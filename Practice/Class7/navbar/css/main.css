@@ -1,0 +1,86 @@
+body {
+	font-family: monospace;
+}
+
+.container {
+	clear: both;
+	margin: 15px;
+	padding: 5px;
+}
+
+.container:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+}
+
+#mynav {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 150px;
+	font-size: 30px;
+}
+
+#mynav li:hover {
+	background-color: rgba(0, 255, 0, 0.8)
+}
+
+#mynav li {
+	border: thin solid black;
+	padding: 0px 3px 0px 3px;
+}
+
+#mynav li a {
+	text-decoration: none;
+	color: black;
+}
+
+#mynav2 {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 300px;
+	font-size: 30px;
+}
+
+#mynav2 li:hover {
+	background-color: rgba(0, 255, 0, 0.8)
+}
+
+#mynav2 li {
+	border: thin solid black;
+	float: left;
+	padding: 0px 3px 0px 3px;
+}
+
+#mynav2 li a {
+	text-decoration: none;
+	color: black;
+}
+
+
+#mynav3 {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	width: 300px;
+	font-size: 30px;
+}
+
+#mynav3 li:hover {
+	background-color: rgba(0, 255, 0, 0.8)
+}
+
+#mynav3 li {
+	border: thin solid black;
+	display: inline-block;
+	padding: 0px 3px 0px 3px;
+}
+
+#mynav3 li a {
+	text-decoration: none;
+	color: black;
+}
