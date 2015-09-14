@@ -1,0 +1,204 @@
+article {
+    text-align: left;
+    padding: 10px;
+    min-height: 10%;
+    background: lightblue;
+}
+
+aside {
+    background-color: #33ffcc;
+    text-align: center;
+}
+
+.ball {
+    border-radius: 5em;
+    width: 10em;
+    height: 10em;
+    float: left;
+    background-color: steelblue;
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.round {
+    border-radius: 10px;
+}
+
+.square {
+    border-radius: 0px;
+    width: 10em;
+    height: 10em;
+    float: left;
+    background-color: steelblue;
+    box-sizing: border-box;
+}
+
+.shadowed {
+    border: thin #336699 solid;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.text-shadow {
+    text-shadow: 10px 10px 7px #444, 20px 20px 10px red;
+}
+
+.wow-button {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: solid 1px black;
+    background: lightgreen;
+    cursor: pointer;
+}
+
+.circle {
+    border-radius: 40%;
+}
+
+.wow-button:hover {
+    color: black;
+    background-color: yellow;
+}
+
+.gradient1 {
+    background-color: #FC0;
+    background-image: -webkit-linear-gradient(left, #900, #FC0, #900);
+    background-image: -moz-linear-gradient(left, #900, #FC0, #900);
+    background-image: -o-linear-gradient(left, #900, #FC0, #900);
+    background-image: linear-gradient(left, #900, #FC0, #900);
+}
+
+.rep-gradient {
+    background-image: -webkit-repeating-linear-gradient(left, #900 10px, #FC0 20px, #000 40px);
+}
+
+.rad-gradient {
+    background-image: -webkit-repeating-radial-gradient(#900 30%, #FC0 50%);
+}
+
+.transformed {
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: skew(45deg, 0) rotate(-10deg) translate(0, 50em);
+    box-shadow: 8px 11px 7px aqua;
+}
+
+.animated {
+    -webkit-transform: translate(0, 0);
+    transition: all 1s ease .2s;
+    cursor: crosshair;
+}
+
+.animated:hover {
+    -webkit-transform: translate(0, 100px);
+}
+
+.animated1 {
+    animation-name: wawa;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: 30;
+}
+
+@keyframes wawa {
+    from {
+        -webkit-transform: translate(0, 0);
+        background-color: purple;
+    }
+    to {
+        -webkit-transform: scale(1.03);
+        background-color: maroon;
+    }
+}
+
+.rotate3d {
+    -webkit-perspective: 500px;
+    -webkit-transform: rotateY(100deg);
+}
+
+.rotate1 {
+    -webkit-perspective-origin: 25% 75%;
+    -webkit-perspective: 500px;
+    -webkit-transform: rotateY(200deg);
+}
+
+.rotate2 {
+    -webkit-perspective-origin: 25% 75%;
+    -webkit-perspective: 5000px;
+    -webkit-transform: rotateY(200deg);
+}
+
+.pentagon {
+    position: relative;
+    width: 54px;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: red transparent;
+}
+
+.pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent red;
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+                    
+
+
+/* nav bar */
+
+ul.nav {
+    list-style-type: none;
+    font: 1.1em Verdana, sans-serif;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ul.nav li {
+    display: inline;
+}
+
+ul.nav a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 8em;
+    height: 1.25em;
+    line-height: 1.25em;
+    background-color: #bfe8f9;
+    background: -webkit-linear-gradient(top, #e4f5fc 0%, #bfe8f9 50%, #9fd8ef 51%, #2ab0ed 100%);
+    /* Chrome10+,Safari5.1+ */
+    border-top: 3px dashed white;
+    border-left: medium solid black;
+}
+
+ul.nav a:hover {
+    background-color: rgba(33, 22, 00, 1);
+    color: white;
+}
+
+.flipcard {
+    position: relative;
+    left: 50%;
+    perspective: 800px;
+    background: red;
+    transform: rotateX(120deg);
+}

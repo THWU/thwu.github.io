@@ -1,0 +1,30 @@
+
+#mynav {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+
+}
+
+#mynav a {
+	text-decoration: none;
+	color: black;
+}
+
+#mynav li:hover {
+	background-image: -webkit-linear-gradient(top, blue, white 10%, yellow 20%, green);
+}
+#mynav li {
+	border: 1px dashed grey;
+	border-left: 5px solid black;
+	width: 8em;
+}
+
+.pic {
+	width: 300px;
+	height: 200px;
+}
+
+.filtered {
+	-webkit-filter: saturate(3);
+}

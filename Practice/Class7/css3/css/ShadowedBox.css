@@ -1,0 +1,24 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#article1 {	
+	border: 1px solid black;
+	width: 500px;
+	padding: 1em;
+	marging: 1em;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: gray 10px 10px 7px;
+}
+
+#article2 {	
+	border: 1px solid black;
+	width: 500px;
+	padding: 1em;
+	marging: 1em;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 25px; 
+	box-shadow: 5px 5px 10px gray;
+}
