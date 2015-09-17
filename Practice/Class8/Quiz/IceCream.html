@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .Question {
+            margin: 5px;
+            padding: 2px;
+        }
+    </style>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        
+            var scoops = 10;
+            while (scoops > 0) {
+                alert("More IceCream!!");
+                var scoops_html = $('#scoops').html();
+                scoops_html += "<li id='scoops" + scoops + "'>還剩下 " + scoops + " 支冰淇淋</li>";
+                $('#scoops').html(scoops_html);
+                scoops -= 1;
+            }
+            alert("Life without IceCream isn't the same");
+            var scoops_html = $('#scoops').html();
+            scoops_html += "<br><strong id='life'>Life without IceCream isn't the same</strong>";
+            $('#scoops').html(scoops_html);
+            
+             alert("WAIT!!");
+            
+            for (scoops = 1; scoops <= 10; scoops ++) {
+                
+                alert("Return IceCream!!");
+                $('#scoops' + scoops).remove();
+            }
+            $('#life').text("Perfect LIFE!");
+        });
+    </script>
+</head>
+
+<body>    
+    <div style="width:500px;border:2px solid black;margin:5px;padding:5px;">
+        <p>Ice Cream~</p>
+        <ul id="scoops">
+            
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,29 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>My Playlist</title>
-    <meta charset="utf-8">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	</style>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./js/bootstrap.min.js"></script>
     <script>
-    function addSongs() {
-        var song1 = document.getElementById("song1");
-        var song2 = document.getElementById("song2");
-        var song3 = document.getElementById("song3");
-        
-        song1.innerHTML = "Blue Suede Strings, by Elvis Pagely";
-        song2.innerHTML = "Great Objects on Fire, by Jerry JSON Lewis";
-        song3.innerHTML = "I Code the Line, by Johnny JavaScript";
-    }
-    window.onload = addSongs;
+        $(document).ready(function() {           
+            
+            var song1 = "Blue Suede Strings, by Elvis Pagely";
+            var song2 = "Great Objects on Fire, by Jerry JSON Lewis";
+            var song3 = "I Code the Line, by Johnny JavaScript";
+            song1 = "<li>" + song1 + "</li>";
+            var playlist = $('#playlist').html();
+            playlist += song1;
+            $('#playlist').html(playlist);
+            
+            song2 = "<li>" + song2 + "</li>";
+            playlist = $('#playlist').html();
+            playlist += song2;
+            $('#playlist').html(playlist);
+            
+            song3 = "<li>" + song3 + "</li>";
+            playlist = $('#playlist').html();
+            playlist += song3;
+            $('#playlist').html(playlist);
+        });
     </script>
 </head>
 
 <body>
     <h1>My awesome playlist</h1>
     <ul id="playlist">
-        <li id="song1"></li>
-        <li id="song2"></li>
-        <li id="song3"></li>
     </ul>
 </body>
 

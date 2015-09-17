@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/PlayList.css" rel="stylesheet">
+    <style>    </style>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            alert("請輸入歌曲名稱後，按ENTER或點擊 ''Add Song'");
+            $('#SongName').focus();
+            
+            var song1 = "Blue Suede Strings, by Elvis Pagely";
+            var song2 = "Great Objects on Fire, by Jerry JSON Lewis";
+            var song3 = "I Code the Line, by Johnny JavaScript";
+            song1 = "<li>" + song1 + "</li>";
+            var playlist = $('#playlist').html();
+            playlist += song1;
+            $('#playlist').html(playlist);
+            
+            song2 = "<li>" + song2 + "</li>";
+            playlist = $('#playlist').html();
+            playlist += song2;
+            $('#playlist').html(playlist);
+            
+            song3 = "<li>" + song3 + "</li>";
+            playlist = $('#playlist').html();
+            playlist += song3;
+            $('#playlist').html(playlist);
+            
+            $('.song').click(function () {
+               $(this).remove; 
+            });
+        });
+        
+        var count = 4;
+        function AddSong() {
+            
+            var songName = $('#SongName').val();
+            if (!songName == '') {
+                songName = "<li id='song" + count + "'>" + songName + "<input type='button' class='button' value='X' onclick='DeleteSong(\"song" + count + "\")'></li>";
+                var playlist = $('#playlist').html();
+                playlist += songName;
+                $('#playlist').html(playlist);
+                $('#SongName').val('');
+                count += 1;
+            }else {
+                
+            }
+        }
+        
+        function DeleteSong(SongID) {            
+            
+            $('#' + SongID).remove();
+        }
+        
+        $(document).keypress(function(e) {
+            if(e.which == 13) {
+                AddSong();
+                $('#SongName').focus();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My awesome playlist</h1>
+        <div id="input">
+            <input type="text" id="SongName">
+            <input type="button" value="Add Song" onclick="AddSong()">
+        </div>
+        <ul id="playlist">
+        </ul>
+    </div>
+</body>
+
+</html>

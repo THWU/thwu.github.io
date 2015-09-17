@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.Question {
+			margin: 5px;
+			padding: 2px;
+		}
+	</style>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function() {
+        	
+			var count = 0;
+			for (var i = 0; i < 5; i ++) {
+				count += i;
+			}
+            $('#Question1_Answer').text(count);
+			
+			var tops = 5;
+			count = 0;
+			while (tops > 0) {
+				 for (var spins = 0; spins< 3; spins ++) {
+					 count ++;
+				 }
+				tops -= 1;	
+			}
+            $('#Question2_Answer').text(count);
+        });
+	</script>
+</head>
+
+<body>
+	<div id="Question1" class="Question">
+		<h3>Q 1</h3>
+		<p>var count = 0;</p>
+		<p>for (var i = 0; i
+			< 5; i ++) {</p>
+				<p> count = count + i;</p>
+				<p>}</p>
+				<p>alert("count is " + count);</p>
+				<p>Result: count = <u id="Question1_Answer"></u></p>
+	</div>
+	<div id="Question2" class="Question">
+		<h3>Q 2</h3>
+		<p>var tops = 5;</p>
+		<p>while (tops > 0) {</p>
+		<p> for (var spins = 0; spins < 3; spins ++) {</p>
+		<p>alert("Top is spinning!");</p>
+		<p>}</p>
+		<p>tops -= 1;</p>
+		<p>}</p>
+		<p>Result: Alert 執行 <u id="Question2_Answer"></u> 次</p>
+	</div>
+</body>
+
+</html>
