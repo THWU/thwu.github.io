@@ -46,9 +46,10 @@
             var songName = $('#SongName').val();
             if (!songName == '') {
                 songName = "<li id='song" + count + "'>" + songName + "<input type='button' class='button' value='X' onclick='DeleteSong(\"song" + count + "\")'></li>";
-                var playlist = $('#playlist').html();
-                playlist += songName;
-                $('#playlist').html(playlist);
+                //var playlist = $('#playlist').html();
+                //playlist += songName;
+                //$('#playlist').html(playlist);
+                $('li:last').append(songName);
                 $('#SongName').val('');
                 count += 1;
             }else {
@@ -59,7 +60,8 @@
         function DeleteSong(SongID) {            
             
             $('#' + SongID).remove();
-        }
+            $('#SongName').focus();
+        }        
         
         $(document).keypress(function(e) {
             if(e.which == 13) {
