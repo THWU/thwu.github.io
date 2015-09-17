@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.Question {
+			margin: 5px;
+			padding: 2px;
+		}
+	</style>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        
+            $('#Question1_Answer').text(2 + " if by sea");
+            $('#Question2_Answer').text(2 * 3.1);
+            $('#Question3_Answer').text(2 * "3");
+            $('#Question4_Answer').text("3" + "4");
+            $('#Question5_Answer').text("3" * "4");
+        });
+    </script>
+</head>
+
+<body>
+	<div id="Question1" class="Question">
+		<h3>Q 1</h3>
+		<p>message = 2 + " if by sea"; </p>
+		<p>Result: message = <u id="Question1_Answer"></u></p>
+	</div>
+	<div id="Question2" class="Question">
+		<h3>Q 2</h3>
+		<p>value = 2 * 3.1; </p>
+		<p>Result: value = <u id="Question2_Answer"></u></p>
+	</div>
+	<div id="Question3" class="Question">
+		<h3>Q 3</h3>
+		<p>value = 2 * "3"</p>
+		<p>Result: value = <u id="Question3_Answer"></u></p>
+	</div>
+	<div id="Question4" class="Question">
+		<h3>Q 4</h3>
+		<p>numORString1 = "3" + "4" </p>
+		<p>Result: numORString1 = <u id="Question4_Answer"></u></p>
+	</div>
+	<div id="Question5" class="Question">
+		<h3>Q 5</h3>
+		<p>numORString1 = "3" * "4" </p>
+		<p>Result: numORString1 = <u id="Question5_Answer"></u></p>
+	</div>
+</body>
+</html>

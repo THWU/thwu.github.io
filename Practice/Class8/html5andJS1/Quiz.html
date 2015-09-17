@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.Question {
+			margin: 5px;
+			padding: 2px;
+		}
+	</style>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        
+            $('#Question1_Answer').text((9 / 5) * 10 + 32);
+            $('#Question2_Answer').text("Number" + " " + "2");
+            $('#Question3_Answer').text(10 >= 5);
+            $('#Question3_Answer_2').text(5 >= 5);
+            $('#Question4_Answer').text("blue" != "pink" );
+            $('#Question5_Answer').text((2 * Math.PI) * 3 );
+        });
+    </script>
+</head>
+
+<body>
+	<div id="Question1" class="Question">
+		<h3>Q 1</h3>
+		<p>(9 / 5) * tempC + 32</p>
+		<p>如果tempC是10的話結果是?  <u id="Question1_Answer"></u></p>
+	</div>
+	<div id="Question2" class="Question">
+		<h3>Q 2</h3>
+		<p>"Number" + " " + "2"</p>
+		<p>結果?  <u id="Question2_Answer"></u></p>
+	</div>
+	<div id="Question3" class="Question">
+		<h3>Q 3</h3>
+		<p>level >= 5</p>
+		<p>如果level是10會得到?  <u id="Question3_Answer"></u></p>
+		<p>那如果level是五呢?  <u id="Question3_Answer_2"></u></p>
+	</div>
+	<div id="Question4" class="Question">
+		<h3>Q 4</h3>
+		<p>color != "pink" </p>
+		<p>如果color是“blue”結果是?  <u id="Question4_Answer"></u></p>
+	</div>
+	<div id="Question5" class="Question">
+		<h3>Q 5</h3>
+		<p>(2 * Math.PI) * r </p>
+		<p>如果r是3會得到?  <u id="Question5_Answer"></u></p>
+	</div>
+</body>
+</html>
