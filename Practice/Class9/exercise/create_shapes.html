@@ -30,6 +30,14 @@
                 $('#plothere').append($('<div>').addClass('cus-shapes'));
              });
              
+             $('#create_Fill').click(function() {
+                //var strDIV =  '<div class="cus-shapes"></div>';
+                var count = $('.cus-shapes').size() % 6;
+                for (var i = count; i < 6; i++) {
+                    $('#plothere').append($('<div>').addClass('cus-shapes'));
+                }
+             });
+             
              $('#delete').click(function() {
                  if ($('.cus-shapes:last-child').size() == 0) {
                      alert("已經沒有囉!");
@@ -49,6 +57,7 @@
     <div class="container">
         <h1>Create Shapes</h1>
         <button id="create">Create</button>
+        <button id="create_Fill">Fill row</button>
         <button id="delete">Delete</button>
         <button id="deleteAll">Delete All</button>
         <section id="plothere">
