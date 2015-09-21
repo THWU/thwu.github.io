@@ -15,7 +15,7 @@
 .cus-shapes:after {
   content: '';
   position: absolute;
-  border-bottom: 70px solid red;
+  border-bottom: 70px solid green;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   top: 70px;

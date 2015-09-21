@@ -24,17 +24,23 @@
     <script src="./js/bootstrap.min.js"></script>
     <script>
          $(document).ready(function() {
-             
+                          
+             var rand;
              $('#create').click(function() {
+                 
                 //var strDIV =  '<div class="cus-shapes"></div>';
-                $('#plothere').append($('<div>').addClass('cus-shapes'));
+                rand = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+                $('#plothere').append($('<div>').addClass('cus-shapes').css('background', rand));
              });
              
              $('#create_Fill').click(function() {
+                 
                 //var strDIV =  '<div class="cus-shapes"></div>';
                 var count = $('.cus-shapes').size() % 6;
                 for (var i = count; i < 6; i++) {
-                    $('#plothere').append($('<div>').addClass('cus-shapes'));
+                    
+                    rand = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+                    $('#plothere').append($('<div>').addClass('cus-shapes').css('background', rand));
                 }
              });
              
@@ -62,10 +68,10 @@
 <body>
     <div class="container">
         <h1>Create Shapes</h1>
-        <button id="create">Create</button>
-        <button id="create_Fill">Fill row</button>
-        <button id="delete">Delete</button>
-        <button id="deleteAll">Delete All</button>
+        <button id="create">Plant a Tree</button>
+        <button id="create_Fill">Fill a row Tree</button>
+        <button id="delete">Cut down</button>
+        <button id="deleteAll">Cut down ALL</button>
         <section id="plothere">
             <div class="cus-shapes"></div>
         </section>
