@@ -1,16 +1,129 @@
-<!-- use this file to get started and follow along! -->
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title> Image Guess </title>
-  <style>
-	body { margin: 20px; }
-  </style>
-  <script>
-  </script>
+    <meta charset="utf-8">
+    <title> Images Guess </title>
+    <style>
+        body {
+            margin: 20px;
+        }
+        
+        img {
+            margin: 20px;
+            height: 15%;
+            width: 15%;
+            float: left;
+        }
+        
+        #zero {
+            float: left;
+        }
+        
+        #answerDiv {
+            clear: both;
+        }
+        
+        .answer {
+            font-size: 50px;
+            margin-right: 10px;
+        }
+        
+        @-webkit-keyframes thumb {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(0.9);
+            }
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+        
+        @-webkit-keyframes spaceboots {
+            0% {
+                -webkit-transform: translate(2px, 1px) rotate(0deg);
+            }
+            10% {
+                -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            }
+            20% {
+                -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            }
+            30% {
+                -webkit-transform: translate(0px, 2px) rotate(0deg);
+            }
+            40% {
+                -webkit-transform: translate(1px, -1px) rotate(1deg);
+            }
+            50% {
+                -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            }
+            60% {
+                -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            }
+            70% {
+                -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            }
+            80% {
+                -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            }
+            90% {
+                -webkit-transform: translate(2px, 2px) rotate(0deg);
+            }
+            100% {
+                -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+        
+        .shake {
+            -webkit-animation-name: spaceboots;
+            -webkit-animation-duration: 0.8s;
+            -webkit-transform-origin: 50% 50%;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+        }
+        /* added in second step */
+    </style>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        var imgs = ['one','two','three','four','five']
+        $(document).ready(function() {
+            
+            init();           
+            
+            $('.image').click(function() {
+               
+               $(this).attr('src', 'img/' + this.id + '.jpg').removeClass('shake');
+               
+               $('#answerDiv').append($('<label>').addClass('answer').text(this.id + '!!!'));
+               if ($('.shake').size() == 0) {
+                 $('#answerDiv').append($('<h1>').text('Are you Correct?!'));
+               }
+            });
+        });
+        
+        function init() {
+          
+          for (var i = 0; i < imgs.length; i ++) {
+            
+            $('#imgDiv').append($('<img>').attr('id', imgs[i]).addClass('shake').addClass('image').attr('src', 'img/' + imgs[i] + 'blur.jpg'));
+          }
+        }
+    </script>
 </head>
+
 <body>
-	<img id="zero" src="zeroblur.jpg">
+    <h5>if you click each img...</h5>
+    <div id="imgDiv">
+    </div>
+    <div id="answerDiv">
+    </div>
+    <script>
+
+    </script>
 </body>
+
 </html>
