@@ -12,9 +12,9 @@
     <style>
         .moving_shadow {
             float: left;
-            width: 50px;
-            height: 50px;
-            margin: 10px;
+            width: 60px;
+            height: 60px;
+            margin: 15px;
             background: steelblue;
             box-shadow: 5px 5px 15px black;
         }
@@ -66,10 +66,12 @@
                     var distanceX = mouseX - centerX;
                     var distanceY = mouseY - centerY;
                     //$(this).html($('<p>').text("distance : " + distanceX + " , " + distanceY));
-                    var shadowX = -distanceX/20;
-                    var shadowY = -distanceY/20;
+                    //var shadowX = -distanceX/10;
+                    //var shadowY = -distanceY/10;
+                    var shadowX = -Math.sqrt(distanceX);
+                    var shadowY = -Math.sqrt(distanceY);
                     //$(this).css('margin-left', Math.sqrt(shadowX) + 'px');
-                    $(this).css('box-shadow', shadowX + 'px ' + shadowY + 'px ' + '1px rgba(0%,0%,0%,0.2)');
+                    $(this).css('box-shadow', shadowX + 'px ' + shadowY + 'px ' + '1px rgba(0%,0%,0%,0.8)');
                     //$(this).html($('<p>').text("distance : " + distanceX + " , " + distanceY));
                 });
             });        
