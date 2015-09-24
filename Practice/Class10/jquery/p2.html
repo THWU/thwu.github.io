@@ -39,23 +39,36 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script>
+        var show = true;
         $(document).ready(function() {
         
            $('.chair').click(function() {
-              alert("Hello World!!");
+              alert($(this).attr('msg'));
            });
            
            $('.name').click(function() {
                 
                 var id = $(this).parent('div').attr('id');
                 if (id == 'Toggle') {
-                    $(this).parent('div').children('.chair').toggle();
+                    $(this).parent('div').children('.chair').toggle('slow');
                 }
                 if (id == 'Slide') {
-                    $(this).parent('div').children('.chair').slideToggle();
+                    $(this).parent('div').children('.chair').slideToggle('slow');
                 }
                 if (id == 'Fade') {
-                    $(this).parent('div').children('.chair').fadeToggle();
+                    $(this).parent('div').children('.chair').fadeToggle('slow');
+                }
+                
+                if (id == 'Slide2') {
+                    $(this).parent('div').children('.chair').animate({height:"250px"}, function() {
+                        if (show) {
+                            $(this).animate({width:"0px"});
+                            show = false;
+                        }else {
+                            $(this).animate({width:"250px"});
+                            show = true;
+                        }
+                    });
                 }
            });
         }); //end doc  ready
@@ -67,15 +80,19 @@
     <div class="container">
         <div id="Toggle" class="portlet">
             <h1 class="name" title="Click ME!">Chair Toggle</h1>
-            <img class="chair" src="img/chair.png" alt="Chair">
+            <img class="chair" src="img/chair.png" alt="Chair" msg="Click title to toggle me">
         </div>
         <div id="Slide" class="portlet">
             <h1 class="name" title="Click ME!">Chair Slide</h1>
-            <img class="chair" src="img/chair.png" alt="Chair">
+            <img class="chair" src="img/chair.png" alt="Chair" msg="Click title to slide me">
         </div>
         <div id="Fade" class="portlet">
             <h1 class="name" title="Click ME!">Chair Fade</h1>
-            <img class="chair" src="img/chair.png" alt="Chair">
+            <img class="chair" src="img/chair.png" alt="Chair" msg="Click title to fade me">
+        </div>
+        <div id="Slide2" class="portlet">
+            <h1 class="name" title="Click ME!">Chair Slide specially!</h1>
+            <img class="chair" src="img/chair.png" alt="Chair" msg="Click title to slide me specially">
         </div>
     </div>
 </body>

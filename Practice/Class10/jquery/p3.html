@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .moving_shadow {
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background: steelblue;
+            box-shadow: 5px 5px 15px black;
+        }
+        
+        .container {
+            min-height: 800px;
+        }
+        
+        #message p {
+            font-size: 2em;
+        }
+        
+        .moving_shadow p {
+            margin: 2px;
+            color: white;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            $('body').css('cursor','wait');
+            for (var i = 0; i <= 150; i ++) {
+                $('.container-fluid').append($('<div>').addClass('moving_shadow'));
+            }
+        
+            $('body').mousemove(function() {
+            
+                var mouseX = event.pageX;
+                var mouseY = event.pageY;
+                $('#message p').text('mouse X, Y : ' + mouseX + ', ' + mouseY);
+                
+                $('.moving_shadow').each(function() {
+                    var divTop = $(this).offset().top;
+                    var divLeft = $(this).offset().left;
+                    var divWidth = $(this).width();
+                    var divHeight = $(this).height();
+                    var centerY = divTop + divHeight/2;
+                    var centerX = divLeft + divWidth/2;
+                    var distanceX = mouseX - centerX;
+                    var distanceY = mouseY - centerY;
+                    //$(this).html($('<p>').text("distance : " + distanceX + " , " + distanceY));
+                    var shadowX = -distanceX/20;
+                    var shadowY = -distanceY/20;
+                    //$(this).css('margin-left', Math.sqrt(shadowX) + 'px');
+                    $(this).css('box-shadow', shadowX + 'px ' + shadowY + 'px ' + '1px rgba(0%,0%,0%,0.2)');
+                    //$(this).html($('<p>').text("distance : " + distanceX + " , " + distanceY));
+                });
+            });        
+        }); //end doc  ready
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="page-header">
+            <h1>Moving Shadows</h1>
+        </div>
+        <div id="message">
+            <p>mouse X, Y:</p>
+        </div>
+    </div>
+</body>
+
+</html>
